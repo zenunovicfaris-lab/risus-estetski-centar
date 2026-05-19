@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-cormorant: "Cormorant Garamond", Georgia, serif;
+  --font-inter: "Inter", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #FBF8F3;
+  color: #352A22;
+  font-family: var(--font-inter);
+}
+
+/* Reduced motion overrides */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Selection color */
+::selection {
+  background-color: #E5D18A;
+  color: #352A22;
+}
+
+/* Custom scrollbar — subtle warm */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FBF8F3;
+}
+::-webkit-scrollbar-thumb {
+  background: #E9DDCF;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #CFA64C;
+}
+
+/* Utility: border-bottom-only inputs */
+.input-line {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #E9DDCF;
+  border-radius: 0;
+  padding: 0.625rem 0;
+  width: 100%;
+  font-family: var(--font-inter);
+  font-size: 0.9375rem;
+  font-weight: 300;
+  color: #352A22;
+  outline: none;
+  transition: border-color 0.25s ease;
+}
+
+.input-line::placeholder {
+  color: #857261;
+  opacity: 0.7;
+}
+
+.input-line:focus {
+  border-bottom-color: #CFA64C;
+}
