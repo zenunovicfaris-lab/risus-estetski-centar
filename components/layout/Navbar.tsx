@@ -40,7 +40,7 @@ export default function Navbar() {
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
           scrolled
             ? "bg-bg-primary/95 backdrop-blur-sm shadow-warm-sm"
-            : "bg-bg-primary/80 backdrop-blur-sm",
+            : "md:bg-bg-primary/80 md:backdrop-blur-sm bg-transparent",
         ].join(" ")}
       >
         <div className="max-w-content mx-auto px-6 md:px-10 h-[64px] md:h-[80px] flex items-center justify-between">
@@ -82,7 +82,7 @@ export default function Navbar() {
             onClick={() => setMenuOpen((v) => !v)}
             aria-label={menuOpen ? "Zatvori izbornik" : "Otvori izbornik"}
             aria-expanded={menuOpen}
-            className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-[5px] text-text-primary"
+            className={["md:hidden flex flex-col justify-center items-center w-10 h-10 gap-[5px]", scrolled ? "text-text-primary" : "text-white"].join(" ")}
           >
             <span
               className={[
