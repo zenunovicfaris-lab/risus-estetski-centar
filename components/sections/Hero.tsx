@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="hidden md:grid md:grid-cols-[48%_52%] min-h-[100svh]">
 
         {/* Left — text panel */}
-        <div className="bg-bg-primary flex flex-col justify-center pl-[6%] pr-6 lg:pl-[7%] xl:pl-[8%] pt-[80px] pb-16">
+        <div className="bg-bg-primary flex flex-col justify-center pl-[10%] pr-6 lg:pl-[12%] xl:pl-[14%] pt-[80px] pb-16">
           <div className="max-w-[520px]">
 
             <p className="font-sans text-[11px] font-400 tracking-[0.2em] uppercase text-accent mb-6">
