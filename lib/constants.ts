@@ -133,26 +133,38 @@ export const TEAM = {
 export const TESTIMONIALS = [
   {
     id: 1,
+    name: "Maja K.",
+    avatar: "https://i.pravatar.cc/80?img=47",
     text: "Profesionalizam osoblja i vrhunska usluga — jedva čekam sljedeći tretman!",
   },
   {
     id: 2,
+    name: "Ana T.",
+    avatar: "https://i.pravatar.cc/80?img=44",
     text: "Ana je profesionalna, educirana i ljubazna. Tretman čišćenja lica — lice je mjesecima bilo čisto i glatko.",
   },
   {
     id: 3,
+    name: "Ivana M.",
+    avatar: "https://i.pravatar.cc/80?img=49",
     text: "Ugodna, opuštajuća atmosfera. Fantastična usluga, svima preporučujem.",
   },
   {
     id: 4,
+    name: "Petra L.",
+    avatar: "https://i.pravatar.cc/80?img=39",
     text: "Svaka pohvala — ugodna atmosfera i profesionalno odrađen posao. Definitivno preporučujem.",
   },
   {
     id: 5,
+    name: "Sara B.",
+    avatar: "https://i.pravatar.cc/80?img=45",
     text: "Hydrafacial tretman je bio nevjerojatan — koža odmah zasja. Osoblje je strpljivo objasnilo svaki korak. Više neću ići nigdje drugdje.",
   },
   {
     id: 6,
+    name: "Lena V.",
+    avatar: "https://i.pravatar.cc/80?img=41",
     text: "Konačno salon koji zaista razumije njegu kože. Rezultati Dermapen tretmana su vidljivi već nakon prvog dolaska. Toplo preporučujem svima!",
   },
 ] as const;

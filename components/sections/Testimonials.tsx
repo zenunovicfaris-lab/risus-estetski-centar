@@ -15,9 +15,30 @@ const GoogleG = () => (
 );
 
 const GoogleBadge = () => (
-  <div className="mt-3 flex items-center gap-1.5">
+  <div className="flex items-center gap-1.5 mt-0.5">
     <GoogleG />
     <span className="font-sans text-[10px] text-text-muted font-300 tracking-[0.04em]">★★★★★ Google</span>
+  </div>
+);
+
+type Testimonial = typeof TESTIMONIALS[number];
+
+const CiteBlock = ({ t, small = false }: { t: Testimonial; small?: boolean }) => (
+  <div className={["border-t border-border flex items-center gap-3", small ? "mt-4 pt-4" : "mt-5 pt-5"].join(" ")}>
+    <img
+      src={t.avatar}
+      alt={t.name}
+      width={small ? 32 : 36}
+      height={small ? 32 : 36}
+      className="rounded-full object-cover flex-shrink-0"
+      style={{ width: small ? 32 : 36, height: small ? 32 : 36 }}
+    />
+    <cite className="not-italic flex flex-col">
+      <span className={["font-sans font-400 text-text-primary", small ? "text-[11px]" : "text-[12px]"].join(" ")}>
+        {t.name}
+      </span>
+      <GoogleBadge />
+    </cite>
   </div>
 );
 
@@ -47,18 +68,12 @@ export default function Testimonials() {
           viewport={viewportOnce}
           className="hidden md:grid md:grid-cols-3 gap-x-10 gap-y-12"
         >
-          {TESTIMONIALS.map((t, i) => (
+          {TESTIMONIALS.map((t) => (
             <motion.blockquote
               key={t.id}
               variants={prefersReducedMotion ? undefined : fadeUp}
-              className={[
-                "relative flex flex-col",
-                i < TESTIMONIALS.length - (TESTIMONIALS.length % 3 === 0 ? 3 : TESTIMONIALS.length % 3)
-                  ? ""
-                  : "",
-              ].join(" ")}
+              className="relative flex flex-col"
             >
-              {/* Decorative quote mark */}
               <span
                 className="block font-serif text-[4rem] leading-none text-accent opacity-[0.12] mb-1 select-none"
                 aria-hidden="true"
@@ -71,14 +86,7 @@ export default function Testimonials() {
               >
                 {t.text}
               </p>
-              <div className="mt-5 pt-5 border-t border-border">
-                <cite className="not-italic">
-                  <span className="font-sans text-[10px] font-400 tracking-[0.12em] uppercase text-text-muted">
-                    Iskustvo klijentica
-                  </span>
-                  <GoogleBadge />
-                </cite>
-              </div>
+              <CiteBlock t={t} />
             </motion.blockquote>
           ))}
         </motion.div>
@@ -106,14 +114,7 @@ export default function Testimonials() {
               <p className="font-serif italic font-300 text-text-primary leading-[1.6] text-[0.875rem] flex-1">
                 {t.text}
               </p>
-              <div className="mt-4 pt-4 border-t border-border">
-                <cite className="not-italic">
-                  <span className="font-sans text-[9px] font-400 tracking-[0.1em] uppercase text-text-muted">
-                    Iskustvo klijentica
-                  </span>
-                  <GoogleBadge />
-                </cite>
-              </div>
+              <CiteBlock t={t} small />
             </motion.blockquote>
           ))}
         </motion.div>

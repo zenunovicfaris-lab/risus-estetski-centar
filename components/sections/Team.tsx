@@ -79,9 +79,9 @@ export default function Team() {
 
             <p className="mt-8 font-sans text-[12px] font-300 tracking-[0.04em] text-text-muted">
               Medicinski certificirani tretmani
-              <span className="mx-3 text-accent/40">·</span>
+              <span className="mx-3 text-accent/70">·</span>
               Individualni pristup
-              <span className="mx-3 text-accent/40">·</span>
+              <span className="mx-3 text-accent/70">·</span>
               Kontinuirana edukacija
             </p>
           </motion.div>

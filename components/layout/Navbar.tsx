@@ -43,7 +43,7 @@ export default function Navbar() {
             : "bg-bg-primary/80 backdrop-blur-sm",
         ].join(" ")}
       >
-        <div className="max-w-content mx-auto px-6 md:px-10 h-[88px] flex items-center justify-between">
+        <div className="max-w-content mx-auto px-6 md:px-10 h-[64px] md:h-[80px] flex items-center justify-between">
           {/* Logo */}
           <a href="#" aria-label="Risus Estetski centar — početna">
             <Image
@@ -51,7 +51,7 @@ export default function Navbar() {
               alt="Risus Estetski centar"
               width={80}
               height={80}
-              className="h-[90px] w-auto object-contain [mix-blend-mode:multiply] transition-all duration-300"
+              className="h-[56px] md:h-[72px] w-auto object-contain [mix-blend-mode:multiply] transition-all duration-300"
               priority
             />
           </a>
